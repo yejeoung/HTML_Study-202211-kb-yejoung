@@ -173,6 +173,6 @@ header {
     background: radial-gradient(circle, white, #f0f0f0, #e6e6e6);
 }
 
-.change-viewtype:not([type=active]) :hover {
+.change-viewtype:not([type=active]):hover {
     background-color: #e6e6e6;
 }
