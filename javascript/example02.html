@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript 2</title>
+    <script src="js/common.js"></script>
 </head>
-
 <body>
+    <button onclick="back();">back</button>
+
     <script>
         // 자료형
         // number, string, boolean
@@ -25,6 +27,7 @@
         console.log(typeof (bool));
 
         // array, object
+        // 데이터 타입이 존재하지 않는다.(script 언어이기 때문)
         var arr = [1, 2, 3, 4, 5];
         arr[2] = 10;
         console.log(arr);
