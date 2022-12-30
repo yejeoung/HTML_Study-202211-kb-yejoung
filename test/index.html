@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최예정 화면구현 본평가</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 왼쪽 메뉴 사이드바 -->
+        <div class="side-nav-bar">
+            <!-- 아이콘들 다 맞게 변경하기 -->
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="asset/image/home 1.png" />
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="asset/image/coffee_icon.png" />
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="asset/image/paper.png" />
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="asset/image/tv.png" />
+            </a>
+            <a href="#" class="side-nav-item">
+                <img class="side-nav-icon" src="asset/image/call.png" />
+            </a>
+        </div>
+        <div class="main-container">
+            <!-- img는 div태그 안에 넣는 것이 좋음 -->
+            <img class="main-cover" src="asset/image/Rectangle 6.png" />
+            <div class="main-nav-bar">
+                <!-- 폰트 굵기 설정 -->
+                <a href="#" class="main-nav-item">HOME</a>
+                <a href="#" class="main-nav-item">COFFEE</a>
+                <a href="#" class="main-nav-item">CF</a>
+                <a href="#" class="main-nav-item">PRINT</a>
+                <a href="#" class="main-nav-item">문의하기</a>
+            </div>
+            <div class="divider"></div>
+            <div class="form-container">
+                <form id="input-form" class="form-content">
+                    <h1 class="form-title">제품 문의하기</h1>
+                    <table class="form-table">
+                        <!-- 테이블 폰트 설정하기 -->
+                        <tr class="form-table-row">
+                            <td class="row-label">제목</td>
+                            <td colspan="3"><input id="title" name="title" class="form-input" type="text" /></td>
+                        </tr>
+                        <tr class="form-table-row">
+                            <td class="row-label">작성자</td>
+                            <td colspan="3"><input id="writer" name="writer" class="form-input" type="text" /></td>
+                        </tr>
+                        <tr class="form-table-row">
+                            <td class="row-label">답변받을 이메일</td>
+                            <td><input id="emailId" name="emailId" class="form-input" /></td>
+                            <!-- @ margin 줘서 가운데 정렬 시키기 -->
+                            <td>@</td>
+                            <td>
+                                <select id="emailAddress" name="emailAddress" class="form-select">
+                                    <option value="gmail.com" selected>gmail.com</option>
+                                    <option value="naver.com">naver.com</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="form-table-row">
+                            <td class="row-label">문의 내용</td>
+                            <td><textarea id="contents" name="contents" class="form-textarea" rows="4"></textarea></td>
+                        </tr>
+                    </table>
+                    <!-- 버튼들이 들어갈 공간(문의하기, 초기화) -->
+                    <div class="form-button-container">
+                        <button class="form-btn" type="button" onclick="formSubmit()">문의하기</button>
+                        <button class="form-btn" type="reset">초기화</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 모르는 함수를 봤을 경우 스크립트로 확인하기
+        const formSubmit = () => {
+            alert('Submit!!');
+            // 뒤에 value를 넣어주면 값을 넣었을 때 무슨 값이 들어갔는지 확인 가능
+            const title = document.getElementById('title').value;
+            const writer = document.getElementById('writer').value;
+            const emailId = document.getElementById('emailId').value;
+            const contents = document.getElementById('contents').value;
+
+            // == => 값을 비교
+            // == => 타입과 값을 같이 비교
+            // title이 공백일 경우 || title에 값이 유효하지않을 경우 || title이 자료형이 정해지지 않은 경우
+            // if (title === '' || title === null || title === undefined) {}
+
+            if(!title || !writer || !emailId || !contents) {
+                alert('모두 입력하세요.')
+                return;
+            }
+
+            const form = document.getElementById('input-form');
+            form.action = 'https://naver.com';
+            // method => 폼 데이터(form data)가 서버로 제출될 때 사용되는 HTTP 메소드를 명시
+            // GET => URL에 폼 데이터를 추가하여 서버로 전달하는 방식
+            form.method = 'GET';
+            form.submit();
+
+            // alert('Submit!');
+
+            // console.log(title);
+        }
+    </script>
+</body>
+
+</html>

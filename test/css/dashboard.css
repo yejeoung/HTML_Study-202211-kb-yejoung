@@ -1,0 +1,112 @@
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    /* 사이드바 왼쪽으로 이동 */
+    display: flex;
+}
+
+/* Side navigation */
+.side-nav-bar {
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+
+    background-color: #C4C4C4;
+}
+
+.side-nav-item {
+    height: 40px;
+    padding-bottom: 30px;
+
+    /* 아이콘 세로로 */
+    display: block;
+}
+
+.side-nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-cover {
+    width: 100%;
+    height: 300px;
+
+    /* 비율 맞춰줌 */
+    object-fit: cover;
+}
+
+.main-nav-bar {
+    padding-top: 11px;
+    padding-bottom: 15px;
+
+    /* space-around => 아이템들의 둘레(around)에 균일한 간격을 만들어 준다. */
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav-item {
+    font-size: 24px;
+    color: #000000;
+}
+
+.divider {
+    border: 1px solid #999494;
+}
+
+.form-container {
+    /* 제품 문의하기 테이블 전체 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+}
+
+.form-content {
+    text-align: center;
+}
+
+.form-title {
+    text-align: center;
+}
+
+.row-label {
+    text-align: right;
+    vertical-align: top;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-textarea {
+    width: 100%;
+}
+
+.form-button-container {
+    /* 버튼 두 개 사이 간격과 정렬 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn {
+    width: 150px;
+    height: 60px;
+
+    font-size: 24px;
+    color: #FFFFFF;
+
+    background-color: #1A8FDD;
+
+    border: 0;
+    border-radius: 10px;
+}
