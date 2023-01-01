@@ -51,6 +51,8 @@ a {
     padding-top: 11px;
     padding-bottom: 15px;
 
+    font-weight: bold;
+
     /* space-around => 아이템들의 둘레(around)에 균일한 간격을 만들어 준다. */
     display: flex;
     justify-content: space-around;
@@ -77,6 +79,10 @@ a {
 
 .form-title {
     text-align: center;
+}
+
+.form-table-row {
+    font-weight: bold;
 }
 
 .row-label {

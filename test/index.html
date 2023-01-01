@@ -32,8 +32,10 @@
             </a>
         </div>
         <div class="main-container">
-            <!-- img는 div태그 안에 넣는 것이 좋음 -->
-            <img class="main-cover" src="asset/image/Rectangle 6.png" />
+            <div class="main-cover-img">
+                <!-- img는 div태그 안에 넣는 것이 좋음 -->
+                <img class="main-cover" src="asset/image/Rectangle 6.png" />
+            </div>
             <div class="main-nav-bar">
                 <!-- 폰트 굵기 설정 -->
                 <a href="#" class="main-nav-item">HOME</a>
@@ -60,7 +62,7 @@
                             <td class="row-label">답변받을 이메일</td>
                             <td><input id="emailId" name="emailId" class="form-input" /></td>
                             <!-- @ margin 줘서 가운데 정렬 시키기 -->
-                            <td>@</td>
+                            <td>&nbsp@</td>
                             <td>
                                 <select id="emailAddress" name="emailAddress" class="form-select">
                                     <option value="gmail.com" selected>gmail.com</option>
